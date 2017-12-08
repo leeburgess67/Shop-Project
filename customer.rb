@@ -29,8 +29,16 @@ attr_reader :pword, :bank_balance
   end
 
   def display_basket_value
-    basket_value = @basket[0].price + @basket[1].price
-    return basket_value.round(2)
+  #  basket_value = @basket[0].price + @basket[1].price
+  #  return basket_value.round(2)
+  def display_basket_value
+  total = 0
+  for basket_item in basket
+    total += basket[basket_item.index]
+  end
+
+  return total
+end
   end
 
   def log_in
