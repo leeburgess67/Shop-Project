@@ -17,8 +17,7 @@ attr_reader :pword, :bank_balance
 
 
   def add_to_basket(item)
-     @basket << item
-    end
+    @basket << item
   end
 
   def return_to_store(item)
