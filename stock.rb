@@ -22,5 +22,4 @@ attr_accessor :name, :price, :ean, :stockholding
   end
 
 
-
 end

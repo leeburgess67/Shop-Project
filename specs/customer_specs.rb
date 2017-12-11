@@ -56,11 +56,11 @@ class TestCustomer < MiniTest::Test
       assert_equal(1, @jimbo.basket.length)
     end
 
-    def test_customer_can_display_basket_items #REVISIT METHOD, NOT CLEAN CODE
-      assert_equal("40' Monitor Ergonomic Keyboard", @bob.display_basket_items)
+    def test_customer_can_display_basket_items
+      assert_equal("40' Monitor\nErgonomic Keyboard", @bob.display_basket_items)
     end
 
-    def test_customer_can_display_basket_value #REVISIT METHOD, NOT CLEAN CODE
+    def test_customer_can_display_basket_value
       assert_equal(13.49, @jimbo.display_basket_value)
     end
 
@@ -69,7 +69,7 @@ class TestCustomer < MiniTest::Test
     end
 
     def test_customer_can_checkout_if_has_enough_money
-    assert_equal("Thank you for shopping with us today, your checkout total is 236.98", @bob.checkout)
+    assert_equal("Thank you for shopping with us today, your checkout total is £236.98", @bob.checkout)
     end
 
     def test_customer_can_checkout_if_not_enough_money

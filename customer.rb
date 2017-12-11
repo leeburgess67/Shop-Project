@@ -25,21 +25,23 @@ attr_reader :pword, :bank_balance
   end
 
   def display_basket_items
-    return @basket[0].name + " " + @basket[1].name
+    list_items = ""
+    for item in @basket
+    list_items += item.name + ("\n")
+    end
+
+    return list_items.chomp
   end
 
   def display_basket_value
-  #  basket_value = @basket[0].price + @basket[1].price
-  #  return basket_value.round(2)
-  def display_basket_value
-  total = 0
-  for basket_item in basket
-    total += basket[basket_item.index]
+    list_total = 0
+    for item in @basket
+    list_total += item.price
+    end
+
+    return list_total.round(2)
   end
 
-  return total
-end
-  end
 
   def log_in
     puts "Please enter your user ID"
@@ -47,16 +49,13 @@ end
     puts "Please enter your password"
     password = gets.chomp
 
-      if user_id == @id && password == @pword
-      return true
-        else
-          return false
-      end
+    return user_id == @id && password == @pword
+
     end
 
     def checkout
       if @bank_balance > display_basket_value
-        return "Thank you for shopping with us today, your checkout total is #{display_basket_value}"
+        return "Thank you for shopping with us today, your checkout total is £#{display_basket_value}"
           else
             return "I'm sorry, you are skint. Please leave my shop immediately before I call the police."
           end
