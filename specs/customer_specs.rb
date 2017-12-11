@@ -15,7 +15,7 @@ class TestCustomer < MiniTest::Test
 
     @jimbo = Customer.new("Jim", "Bobbertson", "Jimbo67", [@hdmi, @mouse], "5 Janefield Street, Glasgow, G17 5RT", "thisismypassword123", 0)
     @bob = Customer.new("Bob", "Hegarty", "Bigbobo", [@monitor, @keyboard], "122a Muckleflats, Stirling, S45 3ER", "p@33w0rd99", 254.50)
-    @simon = Customer.new("Simon", "Simpson", "Sososimpo", [], "45 Nice Street, Nice, N46 5GQ", "supersimpo3212", 235.43)
+    @simon = Customer.new("Simon", "Simpso", "Sososimpo", [], "45 Nice Street, Nice, N46 5GQ", "supersimpo3212", 235.43)
   end
 
     def test_customer_has_first_name
